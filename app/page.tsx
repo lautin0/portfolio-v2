@@ -1,14 +1,14 @@
 import Reveal from "@/components/Reveal";
 import Terminal from "@/components/Terminal";
 
-const CHIPS = ["SOFTWARE ENGINEER II", "KRAKEN · PRO", "FRONTEND / WEB"];
+const CHIPS = ["SOFTWARE ENGINEER", "WEB3 · FINTECH", "FRONTEND / WEB"];
 
 const WORK = [
   {
     index: "[01]",
-    title: "Kraken Pro · Web Trading UI",
-    body: "Frontend for Kraken's professional trading platform: account state surfaces, wallet flows, and real-time interfaces where correctness and latency both matter.",
-    tags: ["TypeScript", "React", "Real-time"],
+    title: "Web3 & DeFi Platforms",
+    body: "Frontend across DEX, lending, stablecoin, and NFT platforms -- from startup prototypes to DeFi protocols holding over $1.4B in TVL.",
+    tags: ["TypeScript", "React", "Web3"],
   },
   {
     index: "[02]",
@@ -44,11 +44,11 @@ const STACK = [
 ];
 
 const FACTS: [string, React.ReactNode][] = [
-  ["ROLE", "Software Engineer II"],
+  ["ROLE", "Senior Software Engineer"],
   [
-    "ORG",
+    "EXP",
     <>
-      Kraken <span className="text-cyan">·</span> Pro
+      10+ yrs <span className="text-cyan">·</span> Web3 / fintech
     </>,
   ],
   [
@@ -57,7 +57,7 @@ const FACTS: [string, React.ReactNode][] = [
       Toronto <span className="text-cyan">·</span> ET
     </>,
   ],
-  ["FOCUS", "Trading web UI"],
+  ["FOCUS", "Real-time web UI"],
   [
     "MODE",
     <>
@@ -65,6 +65,34 @@ const FACTS: [string, React.ReactNode][] = [
     </>,
   ],
   ["TOOLS", "AI-native, MCP-wired"],
+];
+
+const TIMELINE = [
+  {
+    years: "2026 -- NOW",
+    title: "Software Engineer II",
+    detail: "Real-time web interfaces · fintech",
+  },
+  {
+    years: "2025",
+    title: "Cronos Labs",
+    detail: "DeFi protocols -- DEX, lending, stablecoin, and NFT platforms",
+  },
+  {
+    years: "2021",
+    title: "Crypto.com",
+    detail: "Frontend for the Cronos blockchain ecosystem -- DeFi & NFT",
+  },
+  {
+    years: "2018",
+    title: "Hongkong Post",
+    detail: "Mission-critical eServices for the Information Systems Division",
+  },
+  {
+    years: "2014",
+    title: "Early career",
+    detail: "POS, ERP & custom business apps -- C# .NET full-stack",
+  },
 ];
 
 const eyebrow =
@@ -82,7 +110,7 @@ export default function Home() {
               className="h-2 w-2 animate-pulse-dot rounded-full bg-cyan shadow-[0_0_8px_var(--color-cyan)] motion-reduce:animate-none"
               aria-hidden="true"
             ></span>
-            ONLINE · NEW YORK · ET
+            ONLINE · TORONTO · ET
           </div>
           <h1 className="mb-[22px] font-mono text-[clamp(44px,7.5vw,84px)] font-extrabold leading-[1.02] tracking-[-0.03em] text-balance [text-shadow:0_0_28px_rgba(167,139,250,0.35),0_0_80px_rgba(124,92,240,0.25)]">
             Tinsley
@@ -96,7 +124,7 @@ export default function Home() {
             <strong className="font-semibold text-fg">
               web-based applications
             </strong>{" "}
-            for a crypto exchange -- the interfaces traders actually touch.
+            across Web3, DeFi, and fintech -- interfaces people actually touch.
           </p>
           <div className="flex flex-wrap gap-2.5">
             {CHIPS.map((chip) => (
@@ -117,11 +145,11 @@ export default function Home() {
         <div className="grid grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] items-start gap-12 max-[860px]:grid-cols-1">
           <div>
             <p className={aboutP}>
-              I&apos;m a software engineer on Kraken&apos;s Pro team, building
-              the web surfaces of a professional crypto trading platform --
-              account state, wallet flows, real-time market UI. The
+              I&apos;m a senior software engineer with 10+ years across Web3,
+              DeFi, fintech, and enterprise systems -- leading frontend from
+              startup prototypes to protocols with over $1.4B in TVL. The
               self-description hasn&apos;t changed since day one:{" "}
-              <em>I build web-based applications for a crypto exchange.</em>
+              <em>I build web-based applications.</em>
             </p>
             <p className={aboutP}>
               My operating mode is absorb-first. I front-load deep reading of a
@@ -207,14 +235,19 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <div className="mt-[26px] flex flex-wrap items-baseline gap-x-[26px] gap-y-2 rounded-[10px] border border-line border-l-[3px] border-l-violet bg-card px-[26px] py-[22px]">
-          <span className="font-mono text-[13px] tracking-[0.05em] text-cyan">
-            2026 -- NOW
-          </span>
-          <span className="font-semibold">Software Engineer II</span>
-          <span className="text-muted">
-            Kraken (Payward) · Pro team · web trading interfaces
-          </span>
+        <div className="mt-[26px] flex flex-col gap-3">
+          {TIMELINE.map((t) => (
+            <div
+              key={t.years}
+              className="flex flex-wrap items-baseline gap-x-[26px] gap-y-2 rounded-[10px] border border-line border-l-[3px] border-l-violet bg-card px-[26px] py-[22px]"
+            >
+              <span className="min-w-[92px] font-mono text-[13px] tracking-[0.05em] text-cyan">
+                {t.years}
+              </span>
+              <span className="font-semibold">{t.title}</span>
+              <span className="text-muted">{t.detail}</span>
+            </div>
+          ))}
         </div>
       </Reveal>
 
@@ -226,14 +259,14 @@ export default function Home() {
           </h2>
           <p className="mx-auto mb-[34px] max-w-[46ch] text-muted">
             Interesting frontend problems, agentic tooling, or anything at the
-            intersection of trading UI and AI -- my inbox is open.
+            intersection of real-time UI and AI -- my inbox is open.
           </p>
           <div className="flex flex-wrap justify-center gap-3.5">
             <a
               className="rounded-md border border-[rgba(167,139,250,0.6)] bg-[rgba(124,92,240,0.18)] px-[26px] py-[13px] font-mono text-[14px] tracking-[0.04em] text-[#d8ccff] transition-[box-shadow,background-color,transform] duration-200 ease-[ease] hover:-translate-y-0.5 hover:bg-[rgba(124,92,240,0.3)] hover:no-underline hover:shadow-[0_0_30px_rgba(124,92,240,0.35)] motion-reduce:transition-none motion-reduce:hover:translate-none"
-              href="mailto:tinsley.lau@kraken.com"
+              href="https://www.linkedin.com/in/tinsleylau/"
             >
-              tinsley.lau@kraken.com
+              linkedin.com/in/tinsleylau
             </a>
           </div>
         </div>

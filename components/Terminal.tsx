@@ -4,9 +4,9 @@ import { useEffect, useState } from "react";
 
 const LINES = [
   { type: "cmd", text: "whoami" },
-  { type: "out", text: "tinsley.lau · software engineer @ kraken" },
+  { type: "out", text: "tinsley.lau · senior software engineer" },
   { type: "cmd", text: "cat focus.txt" },
-  { type: "out", text: "web trading interfaces · agentic tooling" },
+  { type: "out", text: "real-time web interfaces · agentic tooling" },
   { type: "cmd", text: "status --now" },
   { type: "ok", text: "● shipping" },
 ] as const;
@@ -52,7 +52,7 @@ export default function Terminal() {
     <div
       className="overflow-hidden rounded-[10px] border border-line bg-[rgba(13,9,26,0.85)] font-mono text-[13.5px] leading-[1.9] shadow-[0_0_0_1px_rgba(0,0,0,0.4),0_24px_60px_rgba(0,0,0,0.5),0_0_60px_rgba(124,92,240,0.12)]"
       role="img"
-      aria-label="Terminal showing: whoami returns tinsley.lau, software engineer at Kraken; focus is web trading interfaces and agentic tooling; status is shipping."
+      aria-label="Terminal showing: whoami returns tinsley.lau, senior software engineer; focus is real-time web interfaces and agentic tooling; status is shipping."
     >
       <div
         className="flex items-center gap-2 border-b border-line bg-[rgba(21,14,40,0.9)] px-3.5 py-2.5"
@@ -62,7 +62,7 @@ export default function Terminal() {
         <span className="h-[11px] w-[11px] rounded-full bg-[#f2c94c]"></span>
         <span className="h-[11px] w-[11px] rounded-full bg-ok"></span>
         <span className="ml-auto text-[11.5px] tracking-[0.06em] text-faint">
-          tinsley@kraken:~
+          tinsley@portfolio:~
         </span>
       </div>
       <div
