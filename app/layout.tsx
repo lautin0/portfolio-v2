@@ -61,7 +61,7 @@ export default function RootLayout({
 
         <footer className="relative z-[1] mx-auto flex max-w-content flex-wrap justify-between gap-x-6 gap-y-2.5 px-7 pt-14 pb-11 font-mono text-[12.5px] text-faint">
           <span>© 2026 Tinsley Lau</span>
-          <span>NYC · Eastern Time</span>
+          <span>Canada · Eastern Time</span>
           <span>Built with Claude Code 🐙</span>
         </footer>
       </body>
