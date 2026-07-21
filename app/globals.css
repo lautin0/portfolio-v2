@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0b0716;
+  --color-card: #150e28;
+  --color-line: rgba(167, 139, 250, 0.18);
+  --color-line-bright: rgba(34, 211, 238, 0.55);
+  --color-violet: #a78bfa;
+  --color-cyan: #22d3ee;
+  --color-magenta: #e879f9;
+  --color-fg: #eae5f8;
+  --color-muted: #a79fc9;
+  --color-faint: #837aa9;
+  --color-ok: #4ee19a;
+
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono", Menlo, Consolas, monospace;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --container-content: 1080px;
+
+  --animate-pulse-dot: pulse-dot 2.2s ease-in-out infinite;
+  --animate-flicker: flicker 7s linear infinite;
+  --animate-blink: blink 1.05s steps(1) infinite;
+
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.35; }
+  }
+  @keyframes flicker {
+    0%, 91%, 93.5%, 100% { opacity: 1; text-shadow: 0 0 22px rgba(167, 139, 250, 0.6); }
+    92%, 93% { opacity: 0.55; text-shadow: 0 0 8px rgba(232, 121, 249, 0.7); }
+  }
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+}
+
+@layer base {
+  body {
+    font-size: 17px;
+    line-height: 1.65;
+    background: var(--color-bg);
+    color: var(--color-fg);
+    overflow-x: hidden;
+  }
+
+  ::selection { background: rgba(167, 139, 250, 0.35); }
+
+  a { color: var(--color-cyan); text-decoration: none; }
+  a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+  :focus-visible {
+    outline: 2px solid var(--color-cyan);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+}
+
+@layer components {
+  /* ---------- decorative full-viewport layers ---------- */
+  .grid-layer {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(rgba(167, 139, 250, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(167, 139, 250, 0.045) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 30%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 30%, transparent 100%);
+  }
+
+  .scanlines {
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 3px,
+      rgba(0, 0, 0, 0.055) 3px,
+      rgba(0, 0, 0, 0.055) 4px
+    );
+  }
+
+  /* ---------- scroll reveal ----------
+     JS toggles .visible; the <noscript> override in the layout keeps
+     sections readable without JavaScript */
+  .reveal {
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+}
