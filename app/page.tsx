@@ -12,9 +12,9 @@ const WORK = [
   },
   {
     index: "[02]",
-    title: "Second Brain · Personal AI Agent",
-    body: "An agentic knowledge vault built on Claude Code: custom skills for ingesting, compiling, and querying knowledge, wired to everyday work tools through MCP connectors.",
-    tags: ["Claude Code", "MCP", "Automation"],
+    title: "End-to-End Frontend Observability",
+    body: "User interaction tracking, production monitoring, and real-time bug reporting wired through the frontend -- smoother experiences, faster resolution, fewer surprises in prod.",
+    tags: ["Analytics", "Monitoring", "UX"],
   },
   {
     index: "[03]",
@@ -39,7 +39,7 @@ const STACK = [
   },
   {
     group: "Platform",
-    items: ["Node.js", "Git / GitLab CI", "REST APIs", "Monorepos"],
+    items: ["Node.js", "Git / GitHub Actions", "REST APIs", "Performance & observability"],
   },
 ];
 
@@ -61,7 +61,7 @@ const FACTS: [string, React.ReactNode][] = [
   [
     "MODE",
     <>
-      Absorb <span className="text-cyan">→</span> ship
+      Collaborate <span className="text-cyan">→</span> ship
     </>,
   ],
   ["TOOLS", "AI-native, MCP-wired"],
@@ -147,19 +147,20 @@ export default function Home() {
             <p className={aboutP}>
               I&apos;m a senior software engineer with 10+ years across Web3,
               DeFi, fintech, and enterprise systems -- leading frontend from
-              startup prototypes to protocols with over $1.4B in TVL. The
-              self-description hasn&apos;t changed since day one:{" "}
-              <em>I build web-based applications.</em>
+              startup prototypes to protocols with over $1.4B in TVL. Strip
+              away the titles and I&apos;m a technical problem solver:{" "}
+              <em>find the real problem, build the thing that removes it.</em>
             </p>
             <p className={aboutP}>
-              My operating mode is absorb-first. I front-load deep reading of a
-              codebase, its history, and its context before writing a line --
-              then the contribution curve bends sharply upward once the system
-              clicks. Understanding is the investment; velocity is the return.
+              Shipping is a team sport. I work the seams between product,
+              design, QA, and backend -- turning ambiguity into scope, writing
+              decisions down so they travel, and mentoring so the whole team
+              compounds. From startups to enterprises, one rule holds: clear
+              communication ships faster than heroics.
             </p>
             <p className={aboutP}>
               I work AI-native: agents, custom skills, and MCP integrations
-              wired into everything from my editor to my knowledge base. If a
+              wired into everything from my editor to my daily workflows. If a
               workflow can be compressed, I&apos;ve probably already built the
               tool that compresses it.
             </p>
