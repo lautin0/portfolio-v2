@@ -105,7 +105,7 @@ export default function Home() {
     <main id="top" className="relative z-[1]">
       <header className="mx-auto grid min-h-svh max-w-content grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] items-center gap-14 px-7 pt-[140px] pb-16 max-[860px]:min-h-[auto] max-[860px]:grid-cols-1 max-[860px]:gap-11 max-[860px]:pt-[120px]">
         <div>
-          <div className="mb-7 inline-flex items-center gap-[9px] rounded-full border border-line bg-[rgba(18,12,34,0.6)] px-3.5 py-1.5 font-mono text-[12.5px] tracking-[0.06em] text-muted">
+          <div className="mb-7 inline-flex items-center gap-[9px] rounded-full border border-line bg-badge px-3.5 py-1.5 font-mono text-[12.5px] tracking-[0.06em] text-muted">
             <span
               className="h-2 w-2 animate-pulse-dot rounded-full bg-cyan shadow-[0_0_8px_var(--color-cyan)] motion-reduce:animate-none"
               aria-hidden="true"
@@ -263,7 +263,7 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap justify-center gap-3.5">
             <a
-              className="rounded-md border border-[rgba(167,139,250,0.6)] bg-[rgba(124,92,240,0.18)] px-[26px] py-[13px] font-mono text-[14px] tracking-[0.04em] text-[#d8ccff] transition-[box-shadow,background-color,transform] duration-200 ease-[ease] hover:-translate-y-0.5 hover:bg-[rgba(124,92,240,0.3)] hover:no-underline hover:shadow-[0_0_30px_rgba(124,92,240,0.35)] motion-reduce:transition-none motion-reduce:hover:translate-none"
+              className="rounded-md border border-[rgba(167,139,250,0.6)] bg-[rgba(124,92,240,0.18)] px-[26px] py-[13px] font-mono text-[14px] tracking-[0.04em] text-cta transition-[box-shadow,background-color,transform] duration-200 ease-[ease] hover:-translate-y-0.5 hover:bg-[rgba(124,92,240,0.3)] hover:no-underline hover:shadow-[0_0_30px_rgba(124,92,240,0.35)] motion-reduce:transition-none motion-reduce:hover:translate-none"
               href="https://www.linkedin.com/in/tinsleylau/"
             >
               linkedin.com/in/tinsleylau

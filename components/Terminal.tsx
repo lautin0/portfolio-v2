@@ -50,7 +50,7 @@ export default function Terminal() {
 
   return (
     <div
-      className="overflow-hidden rounded-[10px] border border-line bg-[rgba(13,9,26,0.85)] font-mono text-[13.5px] leading-[1.9] shadow-[0_0_0_1px_rgba(0,0,0,0.4),0_24px_60px_rgba(0,0,0,0.5),0_0_60px_rgba(124,92,240,0.12)]"
+      className="force-dark overflow-hidden rounded-[10px] border border-line bg-[rgba(13,9,26,0.85)] font-mono text-[13.5px] leading-[1.9] shadow-[0_0_0_1px_rgba(0,0,0,0.4),0_24px_60px_rgba(0,0,0,0.5),0_0_60px_rgba(124,92,240,0.12)]"
       role="img"
       aria-label="Terminal showing: whoami returns tinsley.lau, senior software engineer; focus is real-time web interfaces and agentic tooling; status is shipping."
     >

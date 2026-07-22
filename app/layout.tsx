@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import Orbs from "@/components/Orbs";
+import ThemeToggle from "@/components/ThemeToggle";
 import "./globals.css";
+
+/* runs before first paint so a saved/system light preference never flashes dark */
+const themeInit =
+  'try{var t=localStorage.getItem("theme");if(t==="light"||(!t&&matchMedia("(prefers-color-scheme: light)").matches))document.documentElement.dataset.theme="light"}catch(e){}';
 
 export const metadata: Metadata = {
   title: "Tinsley Lau -- Portfolio",
@@ -19,9 +24,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className="scheme-dark scroll-smooth motion-reduce:scroll-auto"
+      className="scroll-smooth motion-reduce:scroll-auto"
+      suppressHydrationWarning
     >
       <body>
+        <script dangerouslySetInnerHTML={{ __html: themeInit }} />
         <noscript>
           <style>{`.reveal { opacity: 1; transform: none; }`}</style>
         </noscript>
@@ -32,7 +39,7 @@ export default function RootLayout({
 
         <nav
           aria-label="Main"
-          className="fixed inset-x-0 top-0 z-10 flex items-center justify-between gap-4 border-b border-line bg-[rgba(11,7,22,0.72)] px-7 py-3.5 backdrop-blur-md"
+          className="fixed inset-x-0 top-0 z-10 flex items-center justify-between gap-4 border-b border-line bg-nav px-7 py-3.5 backdrop-blur-md"
         >
           <a
             className="font-mono text-[15px] font-bold tracking-[0.04em] text-fg hover:no-underline"
@@ -54,6 +61,7 @@ export default function RootLayout({
             <a className={navLink} href="#contact">
               ~/contact
             </a>
+            <ThemeToggle />
           </div>
         </nav>
 

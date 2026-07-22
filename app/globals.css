@@ -12,6 +12,9 @@
   --color-muted: #a79fc9;
   --color-faint: #837aa9;
   --color-ok: #4ee19a;
+  --color-nav: rgba(11, 7, 22, 0.72);
+  --color-badge: rgba(18, 12, 34, 0.6);
+  --color-cta: #d8ccff;
 
   --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "JetBrains Mono", Menlo, Consolas, monospace;
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -33,6 +36,59 @@
   @keyframes blink {
     50% { opacity: 0; }
   }
+}
+
+/* ---------- theming ----------
+   Dark is the default (no attribute). The inline script in layout.tsx sets
+   data-theme before first paint; ThemeToggle switches it at runtime.
+   Unlayered so these overrides win over @layer rules and utilities. */
+:root {
+  color-scheme: dark;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --color-bg: #f7f5fc;
+  --color-card: #ffffff;
+  --color-line: rgba(109, 78, 217, 0.18);
+  --color-line-bright: rgba(8, 145, 178, 0.55);
+  --color-violet: #6d4ed9;
+  --color-cyan: #0e7490;
+  --color-magenta: #c026d3;
+  --color-fg: #221a3a;
+  --color-muted: #56507a;
+  --color-faint: #6e6795;
+  --color-ok: #0b915f;
+  --color-nav: rgba(247, 245, 252, 0.8);
+  --color-badge: rgba(255, 255, 255, 0.65);
+  --color-cta: #503097;
+}
+
+/* the fake terminal window keeps its dark chrome in light mode,
+   so its token-colored text must stay on the dark palette */
+:root[data-theme="light"] .force-dark {
+  --color-fg: #eae5f8;
+  --color-muted: #a79fc9;
+  --color-faint: #837aa9;
+  --color-cyan: #22d3ee;
+  --color-ok: #4ee19a;
+  --color-line: rgba(167, 139, 250, 0.18);
+}
+
+:root[data-theme="light"] .grid-layer {
+  background-image:
+    linear-gradient(rgba(109, 78, 217, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(109, 78, 217, 0.08) 1px, transparent 1px);
+}
+
+:root[data-theme="light"] .scanlines {
+  opacity: 0.35;
+}
+
+:root[data-theme="light"] h1 {
+  text-shadow:
+    0 0 28px rgba(124, 92, 240, 0.22),
+    0 0 80px rgba(124, 92, 240, 0.12);
 }
 
 @layer base {
