@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Orbs from "@/components/Orbs";
+import Liquid from "@/components/Liquid";
 import ThemeToggle from "@/components/ThemeToggle";
 import "./globals.css";
 
@@ -33,7 +33,7 @@ export default function RootLayout({
           <style>{`.reveal { opacity: 1; transform: none; }`}</style>
         </noscript>
 
-        <Orbs />
+        <Liquid />
         <div className="grid-layer" aria-hidden="true"></div>
         <div className="scanlines" aria-hidden="true"></div>
 

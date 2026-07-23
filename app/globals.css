@@ -75,6 +75,15 @@
   --color-line: rgba(167, 139, 250, 0.18);
 }
 
+/* fallback when WebGL is unavailable; matches the shader's palette */
+.liquid-canvas {
+  background: radial-gradient(120% 90% at 30% 30%, #150e28 0%, #0b0716 60%);
+}
+
+:root[data-theme="light"] .liquid-canvas {
+  background: radial-gradient(120% 90% at 30% 30%, #ffffff 0%, #f7f5fc 60%);
+}
+
 :root[data-theme="light"] .grid-layer {
   background-image:
     linear-gradient(rgba(109, 78, 217, 0.08) 1px, transparent 1px),
