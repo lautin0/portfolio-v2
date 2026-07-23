@@ -6,15 +6,15 @@ const CHIPS = ["SOFTWARE ENGINEER", "WEB3 · FINTECH", "FRONTEND / WEB"];
 const WORK = [
   {
     index: "[01]",
-    title: "Web3 & DeFi Platforms",
-    body: "Frontend across DEX, lending, stablecoin, and NFT platforms -- from startup prototypes to DeFi protocols holding over $1.4B in TVL.",
-    tags: ["TypeScript", "React", "Web3"],
+    title: "Crypto Exchange",
+    body: "Frontend for a professional crypto exchange: account state surfaces, wallet flows, and real-time market interfaces -- where correctness and latency both matter.",
+    tags: ["TypeScript", "React", "Real-time"],
   },
   {
     index: "[02]",
-    title: "End-to-End Frontend Observability",
-    body: "User interaction tracking, production monitoring, and real-time bug reporting wired through the frontend -- smoother experiences, faster resolution, fewer surprises in prod.",
-    tags: ["Analytics", "Monitoring", "UX"],
+    title: "Web3 & DeFi Platforms",
+    body: "Frontend across DEX, lending, stablecoin, and NFT platforms -- from startup prototypes to DeFi protocols holding over $1.4B in TVL.",
+    tags: ["TypeScript", "React", "Web3"],
   },
   {
     index: "[03]",
